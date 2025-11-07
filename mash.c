@@ -167,6 +167,7 @@ int mash_execute(char **args) {
     for (int i = 0; i < mash_builtin_enum(); i++) {
         if(strcmp(args[0], builtin_list[i]) == 0) {
             builtin_func[i] (args);
+            return 1;
         }
     }
 
